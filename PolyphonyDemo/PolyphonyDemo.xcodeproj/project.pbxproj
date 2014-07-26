@@ -22,6 +22,18 @@
 		3B73A2C919838EEC00A34FEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2A819838EEB00A34FEC /* UIKit.framework */; };
 		3B73A2D119838EEC00A34FEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B73A2CF19838EEC00A34FEC /* InfoPlist.strings */; };
 		3B73A2D319838EEC00A34FEC /* PolyphonyDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A2D219838EEC00A34FEC /* PolyphonyDemoTests.m */; };
+		3B73A3691983929400A34FEC /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A34F1983929400A34FEC /* array.c */; };
+		3B73A36A1983929400A34FEC /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3521983929400A34FEC /* cJSON.c */; };
+		3B73A36C1983929400A34FEC /* client.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3551983929400A34FEC /* client.c */; };
+		3B73A36D1983929400A34FEC /* compose.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3571983929400A34FEC /* compose.c */; };
+		3B73A36E1983929400A34FEC /* doc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3591983929400A34FEC /* doc.c */; };
+		3B73A36F1983929400A34FEC /* hex.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A35B1983929400A34FEC /* hex.c */; };
+		3B73A3701983929400A34FEC /* ot.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A35D1983929400A34FEC /* ot.c */; };
+		3B73A3711983929400A34FEC /* otdecode.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A35F1983929400A34FEC /* otdecode.c */; };
+		3B73A3721983929400A34FEC /* otencode.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3611983929400A34FEC /* otencode.c */; };
+		3B73A3731983929400A34FEC /* server.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3631983929400A34FEC /* server.c */; };
+		3B73A3741983929400A34FEC /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3651983929400A34FEC /* sha1.c */; };
+		3B73A3751983929400A34FEC /* xform.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3671983929400A34FEC /* xform.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +67,30 @@
 		3B73A2CE19838EEC00A34FEC /* PolyphonyDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PolyphonyDemoTests-Info.plist"; sourceTree = "<group>"; };
 		3B73A2D019838EEC00A34FEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3B73A2D219838EEC00A34FEC /* PolyphonyDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PolyphonyDemoTests.m; sourceTree = "<group>"; };
+		3B73A34F1983929400A34FEC /* array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = array.c; path = ../libot/array.c; sourceTree = "<group>"; };
+		3B73A3501983929400A34FEC /* array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = array.h; path = ../libot/array.h; sourceTree = "<group>"; };
+		3B73A3521983929400A34FEC /* cJSON.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cJSON.c; sourceTree = "<group>"; };
+		3B73A3531983929400A34FEC /* cJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cJSON.h; sourceTree = "<group>"; };
+		3B73A3551983929400A34FEC /* client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = client.c; path = ../libot/client.c; sourceTree = "<group>"; };
+		3B73A3561983929400A34FEC /* client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = client.h; path = ../libot/client.h; sourceTree = "<group>"; };
+		3B73A3571983929400A34FEC /* compose.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = compose.c; path = ../libot/compose.c; sourceTree = "<group>"; };
+		3B73A3581983929400A34FEC /* compose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = compose.h; path = ../libot/compose.h; sourceTree = "<group>"; };
+		3B73A3591983929400A34FEC /* doc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = doc.c; path = ../libot/doc.c; sourceTree = "<group>"; };
+		3B73A35A1983929400A34FEC /* doc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = doc.h; path = ../libot/doc.h; sourceTree = "<group>"; };
+		3B73A35B1983929400A34FEC /* hex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hex.c; path = ../libot/hex.c; sourceTree = "<group>"; };
+		3B73A35C1983929400A34FEC /* hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hex.h; path = ../libot/hex.h; sourceTree = "<group>"; };
+		3B73A35D1983929400A34FEC /* ot.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ot.c; path = ../libot/ot.c; sourceTree = "<group>"; };
+		3B73A35E1983929400A34FEC /* ot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ot.h; path = ../libot/ot.h; sourceTree = "<group>"; };
+		3B73A35F1983929400A34FEC /* otdecode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = otdecode.c; path = ../libot/otdecode.c; sourceTree = "<group>"; };
+		3B73A3601983929400A34FEC /* otdecode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = otdecode.h; path = ../libot/otdecode.h; sourceTree = "<group>"; };
+		3B73A3611983929400A34FEC /* otencode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = otencode.c; path = ../libot/otencode.c; sourceTree = "<group>"; };
+		3B73A3621983929400A34FEC /* otencode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = otencode.h; path = ../libot/otencode.h; sourceTree = "<group>"; };
+		3B73A3631983929400A34FEC /* server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = server.c; path = ../libot/server.c; sourceTree = "<group>"; };
+		3B73A3641983929400A34FEC /* server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = server.h; path = ../libot/server.h; sourceTree = "<group>"; };
+		3B73A3651983929400A34FEC /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sha1.c; path = ../libot/sha1.c; sourceTree = "<group>"; };
+		3B73A3661983929400A34FEC /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = ../libot/sha1.h; sourceTree = "<group>"; };
+		3B73A3671983929400A34FEC /* xform.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xform.c; path = ../libot/xform.c; sourceTree = "<group>"; };
+		3B73A3681983929400A34FEC /* xform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xform.h; path = ../libot/xform.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +120,7 @@
 		3B73A29819838EEB00A34FEC = {
 			isa = PBXGroup;
 			children = (
+				3B73A376198392A300A34FEC /* libot */,
 				3B73A2AA19838EEB00A34FEC /* PolyphonyDemo */,
 				3B73A2CC19838EEC00A34FEC /* PolyphonyDemoTests */,
 				3B73A2A319838EEB00A34FEC /* Frameworks */,
@@ -153,6 +190,46 @@
 				3B73A2CF19838EEC00A34FEC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B73A3511983929400A34FEC /* cjson */ = {
+			isa = PBXGroup;
+			children = (
+				3B73A3521983929400A34FEC /* cJSON.c */,
+				3B73A3531983929400A34FEC /* cJSON.h */,
+			);
+			name = cjson;
+			path = ../libot/cjson;
+			sourceTree = "<group>";
+		};
+		3B73A376198392A300A34FEC /* libot */ = {
+			isa = PBXGroup;
+			children = (
+				3B73A34F1983929400A34FEC /* array.c */,
+				3B73A3501983929400A34FEC /* array.h */,
+				3B73A3551983929400A34FEC /* client.c */,
+				3B73A3561983929400A34FEC /* client.h */,
+				3B73A3571983929400A34FEC /* compose.c */,
+				3B73A3581983929400A34FEC /* compose.h */,
+				3B73A3591983929400A34FEC /* doc.c */,
+				3B73A35A1983929400A34FEC /* doc.h */,
+				3B73A35B1983929400A34FEC /* hex.c */,
+				3B73A35C1983929400A34FEC /* hex.h */,
+				3B73A35D1983929400A34FEC /* ot.c */,
+				3B73A35E1983929400A34FEC /* ot.h */,
+				3B73A35F1983929400A34FEC /* otdecode.c */,
+				3B73A3601983929400A34FEC /* otdecode.h */,
+				3B73A3611983929400A34FEC /* otencode.c */,
+				3B73A3621983929400A34FEC /* otencode.h */,
+				3B73A3631983929400A34FEC /* server.c */,
+				3B73A3641983929400A34FEC /* server.h */,
+				3B73A3651983929400A34FEC /* sha1.c */,
+				3B73A3661983929400A34FEC /* sha1.h */,
+				3B73A3671983929400A34FEC /* xform.c */,
+				3B73A3681983929400A34FEC /* xform.h */,
+				3B73A3511983929400A34FEC /* cjson */,
+			);
+			name = libot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +331,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B73A3741983929400A34FEC /* sha1.c in Sources */,
+				3B73A36E1983929400A34FEC /* doc.c in Sources */,
+				3B73A36D1983929400A34FEC /* compose.c in Sources */,
+				3B73A3711983929400A34FEC /* otdecode.c in Sources */,
+				3B73A3751983929400A34FEC /* xform.c in Sources */,
 				3B73A2B519838EEB00A34FEC /* PLYAppDelegate.m in Sources */,
+				3B73A36C1983929400A34FEC /* client.c in Sources */,
 				3B73A2B119838EEB00A34FEC /* main.m in Sources */,
+				3B73A3701983929400A34FEC /* ot.c in Sources */,
 				3B73A2BE19838EEB00A34FEC /* PLYViewController.m in Sources */,
+				3B73A3731983929400A34FEC /* server.c in Sources */,
+				3B73A36A1983929400A34FEC /* cJSON.c in Sources */,
+				3B73A3691983929400A34FEC /* array.c in Sources */,
+				3B73A3721983929400A34FEC /* otencode.c in Sources */,
+				3B73A36F1983929400A34FEC /* hex.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +560,7 @@
 				3B73A2D819838EEC00A34FEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B73A2D919838EEC00A34FEC /* Build configuration list for PBXNativeTarget "PolyphonyDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +569,7 @@
 				3B73A2DB19838EEC00A34FEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
