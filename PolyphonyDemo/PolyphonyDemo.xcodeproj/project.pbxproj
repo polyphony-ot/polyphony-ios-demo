@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B73A2A519838EEB00A34FEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2A419838EEB00A34FEC /* Foundation.framework */; };
+		3B73A2A719838EEB00A34FEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2A619838EEB00A34FEC /* CoreGraphics.framework */; };
+		3B73A2A919838EEB00A34FEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2A819838EEB00A34FEC /* UIKit.framework */; };
+		3B73A2AF19838EEB00A34FEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B73A2AD19838EEB00A34FEC /* InfoPlist.strings */; };
+		3B73A2B119838EEB00A34FEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A2B019838EEB00A34FEC /* main.m */; };
+		3B73A2B519838EEB00A34FEC /* PLYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A2B419838EEB00A34FEC /* PLYAppDelegate.m */; };
+		3B73A2B819838EEB00A34FEC /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B73A2B619838EEB00A34FEC /* Main_iPhone.storyboard */; };
+		3B73A2BB19838EEB00A34FEC /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B73A2B919838EEB00A34FEC /* Main_iPad.storyboard */; };
+		3B73A2BE19838EEB00A34FEC /* PLYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A2BD19838EEB00A34FEC /* PLYViewController.m */; };
+		3B73A2C019838EEB00A34FEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B73A2BF19838EEB00A34FEC /* Images.xcassets */; };
+		3B73A2C719838EEC00A34FEC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2C619838EEC00A34FEC /* XCTest.framework */; };
+		3B73A2C819838EEC00A34FEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2A419838EEB00A34FEC /* Foundation.framework */; };
+		3B73A2C919838EEC00A34FEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2A819838EEB00A34FEC /* UIKit.framework */; };
+		3B73A2D119838EEC00A34FEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B73A2CF19838EEC00A34FEC /* InfoPlist.strings */; };
+		3B73A2D319838EEC00A34FEC /* PolyphonyDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A2D219838EEC00A34FEC /* PolyphonyDemoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B73A2CA19838EEC00A34FEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B73A29919838EEB00A34FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B73A2A019838EEB00A34FEC;
+			remoteInfo = PolyphonyDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B73A2A119838EEB00A34FEC /* PolyphonyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolyphonyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B73A2A419838EEB00A34FEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3B73A2A619838EEB00A34FEC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3B73A2A819838EEB00A34FEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3B73A2AC19838EEB00A34FEC /* PolyphonyDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PolyphonyDemo-Info.plist"; sourceTree = "<group>"; };
+		3B73A2AE19838EEB00A34FEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B73A2B019838EEB00A34FEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B73A2B219838EEB00A34FEC /* PolyphonyDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PolyphonyDemo-Prefix.pch"; sourceTree = "<group>"; };
+		3B73A2B319838EEB00A34FEC /* PLYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLYAppDelegate.h; sourceTree = "<group>"; };
+		3B73A2B419838EEB00A34FEC /* PLYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLYAppDelegate.m; sourceTree = "<group>"; };
+		3B73A2B719838EEB00A34FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		3B73A2BA19838EEB00A34FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		3B73A2BC19838EEB00A34FEC /* PLYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLYViewController.h; sourceTree = "<group>"; };
+		3B73A2BD19838EEB00A34FEC /* PLYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLYViewController.m; sourceTree = "<group>"; };
+		3B73A2BF19838EEB00A34FEC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3B73A2C519838EEC00A34FEC /* PolyphonyDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolyphonyDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B73A2C619838EEC00A34FEC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3B73A2CE19838EEC00A34FEC /* PolyphonyDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PolyphonyDemoTests-Info.plist"; sourceTree = "<group>"; };
+		3B73A2D019838EEC00A34FEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B73A2D219838EEC00A34FEC /* PolyphonyDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PolyphonyDemoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B73A29E19838EEB00A34FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B73A2A719838EEB00A34FEC /* CoreGraphics.framework in Frameworks */,
+				3B73A2A919838EEB00A34FEC /* UIKit.framework in Frameworks */,
+				3B73A2A519838EEB00A34FEC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B73A2C219838EEC00A34FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B73A2C719838EEC00A34FEC /* XCTest.framework in Frameworks */,
+				3B73A2C919838EEC00A34FEC /* UIKit.framework in Frameworks */,
+				3B73A2C819838EEC00A34FEC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B73A29819838EEB00A34FEC = {
+			isa = PBXGroup;
+			children = (
+				3B73A2AA19838EEB00A34FEC /* PolyphonyDemo */,
+				3B73A2CC19838EEC00A34FEC /* PolyphonyDemoTests */,
+				3B73A2A319838EEB00A34FEC /* Frameworks */,
+				3B73A2A219838EEB00A34FEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B73A2A219838EEB00A34FEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B73A2A119838EEB00A34FEC /* PolyphonyDemo.app */,
+				3B73A2C519838EEC00A34FEC /* PolyphonyDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B73A2A319838EEB00A34FEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B73A2A419838EEB00A34FEC /* Foundation.framework */,
+				3B73A2A619838EEB00A34FEC /* CoreGraphics.framework */,
+				3B73A2A819838EEB00A34FEC /* UIKit.framework */,
+				3B73A2C619838EEC00A34FEC /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B73A2AA19838EEB00A34FEC /* PolyphonyDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3B73A2B319838EEB00A34FEC /* PLYAppDelegate.h */,
+				3B73A2B419838EEB00A34FEC /* PLYAppDelegate.m */,
+				3B73A2B619838EEB00A34FEC /* Main_iPhone.storyboard */,
+				3B73A2B919838EEB00A34FEC /* Main_iPad.storyboard */,
+				3B73A2BC19838EEB00A34FEC /* PLYViewController.h */,
+				3B73A2BD19838EEB00A34FEC /* PLYViewController.m */,
+				3B73A2BF19838EEB00A34FEC /* Images.xcassets */,
+				3B73A2AB19838EEB00A34FEC /* Supporting Files */,
+			);
+			path = PolyphonyDemo;
+			sourceTree = "<group>";
+		};
+		3B73A2AB19838EEB00A34FEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B73A2AC19838EEB00A34FEC /* PolyphonyDemo-Info.plist */,
+				3B73A2AD19838EEB00A34FEC /* InfoPlist.strings */,
+				3B73A2B019838EEB00A34FEC /* main.m */,
+				3B73A2B219838EEB00A34FEC /* PolyphonyDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B73A2CC19838EEC00A34FEC /* PolyphonyDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B73A2D219838EEC00A34FEC /* PolyphonyDemoTests.m */,
+				3B73A2CD19838EEC00A34FEC /* Supporting Files */,
+			);
+			path = PolyphonyDemoTests;
+			sourceTree = "<group>";
+		};
+		3B73A2CD19838EEC00A34FEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B73A2CE19838EEC00A34FEC /* PolyphonyDemoTests-Info.plist */,
+				3B73A2CF19838EEC00A34FEC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B73A2A019838EEB00A34FEC /* PolyphonyDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B73A2D619838EEC00A34FEC /* Build configuration list for PBXNativeTarget "PolyphonyDemo" */;
+			buildPhases = (
+				3B73A29D19838EEB00A34FEC /* Sources */,
+				3B73A29E19838EEB00A34FEC /* Frameworks */,
+				3B73A29F19838EEB00A34FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PolyphonyDemo;
+			productName = PolyphonyDemo;
+			productReference = 3B73A2A119838EEB00A34FEC /* PolyphonyDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B73A2C419838EEC00A34FEC /* PolyphonyDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B73A2D919838EEC00A34FEC /* Build configuration list for PBXNativeTarget "PolyphonyDemoTests" */;
+			buildPhases = (
+				3B73A2C119838EEC00A34FEC /* Sources */,
+				3B73A2C219838EEC00A34FEC /* Frameworks */,
+				3B73A2C319838EEC00A34FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B73A2CB19838EEC00A34FEC /* PBXTargetDependency */,
+			);
+			name = PolyphonyDemoTests;
+			productName = PolyphonyDemoTests;
+			productReference = 3B73A2C519838EEC00A34FEC /* PolyphonyDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B73A29919838EEB00A34FEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PLY;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Polyphony;
+				TargetAttributes = {
+					3B73A2C419838EEC00A34FEC = {
+						TestTargetID = 3B73A2A019838EEB00A34FEC;
+					};
+				};
+			};
+			buildConfigurationList = 3B73A29C19838EEB00A34FEC /* Build configuration list for PBXProject "PolyphonyDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B73A29819838EEB00A34FEC;
+			productRefGroup = 3B73A2A219838EEB00A34FEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B73A2A019838EEB00A34FEC /* PolyphonyDemo */,
+				3B73A2C419838EEC00A34FEC /* PolyphonyDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B73A29F19838EEB00A34FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B73A2BB19838EEB00A34FEC /* Main_iPad.storyboard in Resources */,
+				3B73A2C019838EEB00A34FEC /* Images.xcassets in Resources */,
+				3B73A2B819838EEB00A34FEC /* Main_iPhone.storyboard in Resources */,
+				3B73A2AF19838EEB00A34FEC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B73A2C319838EEC00A34FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B73A2D119838EEC00A34FEC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B73A29D19838EEB00A34FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B73A2B519838EEB00A34FEC /* PLYAppDelegate.m in Sources */,
+				3B73A2B119838EEB00A34FEC /* main.m in Sources */,
+				3B73A2BE19838EEB00A34FEC /* PLYViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B73A2C119838EEC00A34FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B73A2D319838EEC00A34FEC /* PolyphonyDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B73A2CB19838EEC00A34FEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B73A2A019838EEB00A34FEC /* PolyphonyDemo */;
+			targetProxy = 3B73A2CA19838EEC00A34FEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3B73A2AD19838EEB00A34FEC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B73A2AE19838EEB00A34FEC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3B73A2B619838EEB00A34FEC /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B73A2B719838EEB00A34FEC /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		3B73A2B919838EEB00A34FEC /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B73A2BA19838EEB00A34FEC /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		3B73A2CF19838EEC00A34FEC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B73A2D019838EEC00A34FEC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B73A2D419838EEC00A34FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B73A2D519838EEC00A34FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B73A2D719838EEC00A34FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PolyphonyDemo/PolyphonyDemo-Prefix.pch";
+				INFOPLIST_FILE = "PolyphonyDemo/PolyphonyDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3B73A2D819838EEC00A34FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PolyphonyDemo/PolyphonyDemo-Prefix.pch";
+				INFOPLIST_FILE = "PolyphonyDemo/PolyphonyDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3B73A2DA19838EEC00A34FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PolyphonyDemo.app/PolyphonyDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PolyphonyDemo/PolyphonyDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PolyphonyDemoTests/PolyphonyDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3B73A2DB19838EEC00A34FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PolyphonyDemo.app/PolyphonyDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PolyphonyDemo/PolyphonyDemo-Prefix.pch";
+				INFOPLIST_FILE = "PolyphonyDemoTests/PolyphonyDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B73A29C19838EEB00A34FEC /* Build configuration list for PBXProject "PolyphonyDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B73A2D419838EEC00A34FEC /* Debug */,
+				3B73A2D519838EEC00A34FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B73A2D619838EEC00A34FEC /* Build configuration list for PBXNativeTarget "PolyphonyDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B73A2D719838EEC00A34FEC /* Debug */,
+				3B73A2D819838EEC00A34FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3B73A2D919838EEC00A34FEC /* Build configuration list for PBXNativeTarget "PolyphonyDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B73A2DA19838EEC00A34FEC /* Debug */,
+				3B73A2DB19838EEC00A34FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B73A29919838EEB00A34FEC /* Project object */;
+}
