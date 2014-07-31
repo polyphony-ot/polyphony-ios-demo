@@ -10,7 +10,7 @@
 #import "SRWebSocket.h"
 #import "client.h"
 
-@interface PLYViewController () <SRWebSocketDelegate>
+@interface PLYViewController () <SRWebSocketDelegate, NSTextStorageDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
@@ -20,12 +20,15 @@
 
 static ot_client *client;
 static UITextView *staticTextView;
+static SRWebSocket *websocket;
 
 static int client_event(ot_event_type t, ot_op* op) {
     if (t != OT_OP_APPLIED) {
         return 0;
     }
-    
+
+    id temp = staticTextView.textStorage.delegate;
+    staticTextView.textStorage.delegate = nil;
     size_t pos = 0;
     ot_comp* comps = op->comps.data;
     for (size_t i = 0; i < op->comps.len; ++i) {
@@ -40,7 +43,7 @@ static int client_event(ot_event_type t, ot_op* op) {
                 NSString* utf8String = [[NSString alloc] initWithUTF8String:insert.text];
                 NSAttributedString *insertString = [[NSAttributedString alloc] initWithString:utf8String];
                 [staticTextView.textStorage insertAttributedString:insertString atIndex:pos];
-                pos += comp->value.skip.count;
+                pos += utf8String.length;
                 break;
             }
             case OT_DELETE:
@@ -54,10 +57,14 @@ static int client_event(ot_event_type t, ot_op* op) {
                 break;
         }
     }
+
+    staticTextView.textStorage.delegate = temp;
     return 0;
 }
 
 static int client_send(const char* op) {
+    NSString *string = [[NSString alloc] initWithUTF8String:op];
+    [websocket send:string];
     return 0;
 }
 
@@ -66,11 +73,12 @@ static int client_send(const char* op) {
     [super viewDidLoad];
 
     NSURL *url = [[NSURL alloc] initWithString:@"ws://staging.polyphony-ot.com:8080"];
-    SRWebSocket* socket = [[SRWebSocket alloc] initWithURL:url];
-    socket.delegate = self;
-    [socket open];
+    websocket = [[SRWebSocket alloc] initWithURL:url];
+    websocket.delegate = self;
+    [websocket open];
 
     staticTextView = self.textView;
+    staticTextView.textStorage.delegate = self;
     client = ot_new_client(client_send, client_event, 0);
 }
 
@@ -97,6 +105,48 @@ static int client_send(const char* op) {
     }
 
     ot_client_receive(client, [message UTF8String]);
+}
+
+- (void)textStorage:(NSTextStorage *)textStorage willProcessEditing:(NSTextStorageEditActions)editedMask range:(NSRange)editedRange changeInLength:(NSInteger)delta {
+    if (delta > 0) {
+        char parent[20] = { 0 };
+        ot_op* op = ot_new_op(0, parent);
+
+        uint32_t beforeLength = (uint32_t)editedRange.location;
+        if (beforeLength > 0) {
+            ot_skip(op, beforeLength);
+        }
+
+        const char* inserted = [[textStorage.string substringWithRange:editedRange] UTF8String];
+        ot_insert(op, inserted);
+
+        uint32_t afterLength = (uint32_t)(textStorage.string.length - (beforeLength + delta));
+        if (afterLength > 0) {
+            ot_skip(op, afterLength);
+        }
+
+        ot_client_apply(client, &op);
+    } else if (delta < 0) {
+        char parent[20] = { 0 };
+        ot_op* op = ot_new_op(0, parent);
+
+        uint32_t beforeLength = (uint32_t)editedRange.location;
+        if (beforeLength > 0) {
+            ot_skip(op, beforeLength);
+        }
+
+        uint32_t deletedLength = (uint32_t)(delta * -1);
+        ot_delete(op, deletedLength);
+
+        uint32_t afterLength = (uint32_t)(textStorage.string.length - beforeLength);
+        if (afterLength > 0) {
+            ot_skip(op, afterLength);
+        }
+
+        ot_client_apply(client, &op);
+    } else {
+
+    }
 }
 
 @end
