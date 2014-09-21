@@ -1,5 +1,5 @@
-#ifndef libot_otdecode_h
-#define libot_otdecode_h
+#ifndef LIBOT_DECODE_H
+#define LIBOT_DECODE_H
 
 #include <string.h>
 #include <stdlib.h>
@@ -7,7 +7,7 @@
 #include "ot.h"
 #include "array.h"
 #include "hex.h"
-#include "cJSON.h"
+#include "cjson/cJSON.h"
 #include "doc.h"
 
 // Decodes an operation from a UTF-8 JSON string.

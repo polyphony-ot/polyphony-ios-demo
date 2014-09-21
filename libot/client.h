@@ -1,5 +1,5 @@
-#ifndef libot_client_h
-#define libot_client_h
+#ifndef LIBOT_CLIENT_H
+#define LIBOT_CLIENT_H
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -7,8 +7,8 @@
 #include "compose.h"
 #include "doc.h"
 #include "xform.h"
-#include "otencode.h"
-#include "otdecode.h"
+#include "encode.h"
+#include "decode.h"
 
 typedef struct {
     send_func send;
@@ -17,12 +17,10 @@ typedef struct {
     uint32_t client_id;
     bool ack_required;
     ot_op* anticipated;
-    bool free_anticipated_comps;
     ot_op* buffer;
-    bool free_buffer_comps;
 } ot_client;
 
-ot_client* ot_new_client(send_func send, ot_event_func event, uint32_t id);
+ot_client* ot_new_client(send_func send, ot_event_func event);
 
 void ot_free_client(ot_client* client);
 

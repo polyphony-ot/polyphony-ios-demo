@@ -21,11 +21,11 @@ static void ot_free_fmtbound(ot_comp_fmtbound* fmtbound) {
     array_free(&fmtbound->end);
 }
 
-ot_op* ot_new_op(uint32_t client_id, char parent[20]) {
+ot_op* ot_new_op() {
     ot_op* op = (ot_op*)malloc(sizeof(ot_op));
-    op->client_id = client_id;
+    op->client_id = 0;
     array_init(&op->comps, sizeof(ot_comp));
-    memcpy(op->parent, parent, 20);
+    memset(op->parent, 0, 20);
     memset(op->hash, 0, 20);
 
     return op;
@@ -160,6 +160,10 @@ bool ot_equal(const ot_op* op1, const ot_op* op2) {
 }
 
 void ot_skip(ot_op* op, uint32_t count) {
+    if (count == 0) {
+        return;
+    }
+
     ot_comp* comps = op->comps.data;
     ot_comp* last = comps + (op->comps.len - 1);
     if (op->comps.len > 0 && last->type == OT_SKIP) {
@@ -172,6 +176,10 @@ void ot_skip(ot_op* op, uint32_t count) {
 }
 
 void ot_insert(ot_op* op, const char* text) {
+    if (text == NULL) {
+        return;
+    }
+
     ot_comp* comps = op->comps.data;
     ot_comp* last = comps + (op->comps.len - 1);
     if (op->comps.len > 0 && last->type == OT_INSERT) {
@@ -190,6 +198,10 @@ void ot_insert(ot_op* op, const char* text) {
 }
 
 void ot_delete(ot_op* op, uint32_t count) {
+    if (count == 0) {
+        return;
+    }
+
     ot_comp* comps = op->comps.data;
     ot_comp* last = comps + (op->comps.len - 1);
     if (op->comps.len > 0 && last->type == OT_DELETE) {
@@ -307,6 +319,19 @@ char* ot_snapshot(ot_op* op) {
     return snapshot;
 }
 
+uint32_t ot_size(const ot_op* op) {
+    uint32_t size = 0;
+    ot_comp* comps = op->comps.data;
+    for (size_t i = 0; i < op->comps.len; ++i) {
+        ot_comp* comp = comps + i;
+        if (comp->type == OT_INSERT) {
+            size += strlen(comp->value.insert.text);
+        }
+    }
+
+    return size;
+}
+
 void ot_iter_init(ot_iter* iter, const ot_op* op) {
     iter->op = op;
     iter->started = false;
@@ -326,9 +351,7 @@ static bool ot_iter_adv(ot_iter* iter, size_t n, size_t max) {
     return false;
 }
 
-bool ot_iter_next(ot_iter* iter) {
-    return ot_iter_skip(iter, 1);
-}
+bool ot_iter_next(ot_iter* iter) { return ot_iter_skip(iter, 1); }
 
 // This can be made more efficient instead of simply calling ot_iter_next()
 // "count" times.
@@ -355,7 +378,7 @@ bool ot_iter_skip(ot_iter* iter, size_t count) {
             max = strlen(insert.text);
         } else if (comp->type == OT_DELETE) {
             ot_comp_delete delete = comp->value.delete;
-            max = (size_t)delete.count;
+            max = (size_t) delete.count;
         } else if (comp->type == OT_OPEN_ELEMENT) {
             max = 0;
         } else if (comp->type == OT_CLOSE_ELEMENT) {

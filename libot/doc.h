@@ -1,5 +1,5 @@
-#ifndef libot_doc_h
-#define libot_doc_h
+#ifndef LIBOT_DOC_H
+#define LIBOT_DOC_H
 
 #include <stdlib.h>
 #include <string.h>
@@ -13,6 +13,8 @@
 typedef struct ot_doc {
     array history;
     ot_op* composed;
+    uint32_t size;
+    uint32_t max_size;
 } ot_doc;
 
 // Creates and returns a new document. It must be freed by the caller using

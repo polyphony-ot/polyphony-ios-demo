@@ -1,7 +1,12 @@
-#include "otdecode.h"
+#include "decode.h"
 
 // decode_cjson_op decodes a cJSON item into an op.
 ot_err decode_cjson_op(cJSON* json, ot_op* op) {
+    cJSON* error_code = cJSON_GetObjectItem(json, "errorCode");
+    if (error_code != NULL) {
+        return error_code->valueint;
+    }
+
     cJSON* client_idf = cJSON_GetObjectItem(json, "clientId");
     if (client_idf == NULL) {
         return OT_ERR_CLIENT_ID_MISSING;
@@ -90,8 +95,7 @@ ot_err ot_decode_doc(ot_doc* doc, const char* const json) {
     for (int i = 0; i < max; ++i) {
         cJSON* item = cJSON_GetArrayItem(root, i);
 
-        char parent[20] = { 0 };
-        ot_op* op = ot_new_op(0, parent);
+        ot_op* op = ot_new_op();
         ot_err err = decode_cjson_op(item, op);
         if (err != OT_ERR_NONE) {
             cJSON_Delete(root);
