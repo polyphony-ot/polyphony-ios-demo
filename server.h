@@ -1,5 +1,5 @@
-#ifndef libot_server_h
-#define libot_server_h
+#ifndef LIBOT_SERVER_H
+#define LIBOT_SERVER_H
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -7,8 +7,8 @@
 #include "doc.h"
 #include "xform.h"
 #include "compose.h"
-#include "otencode.h"
-#include "otdecode.h"
+#include "encode.h"
+#include "decode.h"
 
 typedef struct {
     send_func send;

@@ -21,8 +21,8 @@ SOURCES=\
 	compose.c \
 	hex.c \
 	ot.c \
-	otdecode.c \
-	otencode.c \
+	decode.c \
+	encode.c \
 	server.c \
 	xform.c \
 	sha1.c \
@@ -30,7 +30,10 @@ SOURCES=\
 	cjson/cJSON.c
 
 # List of sources for test scenarios.
-SCENARIOS=$(wildcard test/scenarios/*.c)
+SCENARIOS=$(wildcard test/scenario/*.c)
+
+# List of source for unit tests.
+TESTS=$(wildcard test/unit/*.c)
 
 # Output directory where binaries and build artifacts will be placed.
 BIN=bin
@@ -70,7 +73,7 @@ all: debug release test
 # Debug targets #
 
 $(BIN)/debug/$(LIB): $(SOURCES)
-	$(CC) $(CFLAGS) -c -g -Icjson $(SOURCES)
+	$(CC) $(CFLAGS) -c -g $(SOURCES)
 	mkdir -p $(BIN)/debug
 	$(AR) rs $(BIN)/debug/$(LIB) *.o
 ifeq ($(OS), Darwin)
@@ -84,7 +87,7 @@ debug: $(BIN)/debug/$(LIB)
 # Release targets #
 
 $(BIN)/release/$(LIB): $(SOURCES)
-	$(CC) $(CFLAGS) -DNDEBUG -c -O3 -Icjson $(SOURCES)
+	$(CC) $(CFLAGS) -DNDEBUG -c -O3 $(SOURCES)
 	mkdir -p $(BIN)/release
 	$(AR) rs $(BIN)/release/$(LIB) *.o
 ifeq ($(OS), Darwin)
@@ -97,21 +100,23 @@ release: $(BIN)/release/$(LIB)
 
 # Test targets #
 
-$(BIN)/debug/scenarios$(EXESUFFIX): $(BIN)/debug/$(LIB) $(SCENARIOS) \
-	test/scenarios/scenario.h
-	$(CC) $(CFLAGS) -g -Icjson -o "$(BIN)/debug/scenarios$(EXESUFFIX)" \
+$(BIN)/debug/scenario$(EXESUFFIX): $(BIN)/debug/$(LIB) $(SCENARIOS) \
+	test/scenario/scenario.h
+	$(CC) $(CFLAGS) -g -o "$(BIN)/debug/scenario$(EXESUFFIX)" \
 	$(SCENARIOS) $(BIN)/debug/$(LIB)
 
-$(BIN)/debug/test$(EXESUFFIX): $(BIN)/debug/$(LIB) test/libot_test.c
-	$(CC) $(CFLAGS) -g -Icjson -o "$(BIN)/debug/test$(EXESUFFIX)" \
-	test/libot_test.c $(BIN)/debug/$(LIB)
+$(BIN)/debug/test$(EXESUFFIX): $(BIN)/debug/$(LIB) $(TESTS)
+	$(CC) $(CFLAGS) -g -o "$(BIN)/debug/test$(EXESUFFIX)" \
+	$(TESTS) $(BIN)/debug/$(LIB)
 
-test: $(BIN)/debug/test$(EXESUFFIX) $(BIN)/debug/scenarios$(EXESUFFIX)
+test: $(BIN)/debug/test$(EXESUFFIX) $(BIN)/debug/scenario$(EXESUFFIX)
 	$(TESTRUNNER) $(BIN)/debug/test$(EXESUFFIX)
-	$(TESTRUNNER) $(BIN)/debug/scenarios$(EXESUFFIX)
+	$(TESTRUNNER) $(BIN)/debug/scenario$(EXESUFFIX)
 ifdef COVERAGE
-	@echo "Code coverage is temporarily disabled due to an incompatibility \
-	between lcov and Apple's (buggy) version of gcov."
+	lcov --capture --directory . --output-file $(BIN)/coverage.info \
+	--rc lcov_branch_coverage=1
+	genhtml $(BIN)/coverage.info --output-directory $(BIN)/coverage \
+	--function-coverage --branch-coverage -t "All Tests"
 	rm *.gcno *.gcda
 endif
 

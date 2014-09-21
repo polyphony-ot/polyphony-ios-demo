@@ -42,6 +42,10 @@ typedef enum {
     // Couldn't compose two operations, usually because the first op wasn't a
     // parent of the second op.
     OT_ERR_COMPOSE_FAILED = 10,
+
+    // Couldn't append an operation to a document because it would cause the
+    // document to go beyond its maximum size.
+    OT_ERR_MAX_SIZE = 11
 } ot_err;
 
 typedef struct ot_fmt {
@@ -101,13 +105,14 @@ typedef enum {
     OT_CONNECTED = 0,
     OT_DISCONNECTED = 1,
     OT_OP_APPLIED = 2,
-    OT_OP_INCOMING = 3
+    OT_OP_INCOMING = 3,
+    OT_ERROR = 4
 } ot_event_type;
 
 typedef int (*send_func)(const char*);
 typedef int (*ot_event_func)(ot_event_type, ot_op*);
 
-ot_op* ot_new_op(uint32_t client_id, char parent[20]);
+ot_op* ot_new_op();
 void ot_free_op(ot_op* op);
 void ot_free_comp(ot_comp* comp);
 ot_op* ot_dup_op(const ot_op* op);
@@ -127,6 +132,7 @@ void ot_close_element(ot_op* op);
 void ot_start_fmt(ot_op* op, const char* name, const char* value);
 void ot_end_fmt(ot_op* op, const char* name, const char* value);
 char* ot_snapshot(ot_op* op);
+uint32_t ot_size(const ot_op* op);
 
 ot_comp_fmtbound* ot_new_fmtbound();
 

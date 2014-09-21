@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdarg.h>
-#include "otencode.h"
+#include "encode.h"
 #include "hex.h"
 
 static cJSON* cjson_op(const ot_op* const op) {
@@ -66,6 +66,16 @@ char* ot_encode_doc(const ot_doc* const doc) {
     for (size_t i = 0; i < doc->history.len; ++i) {
         cJSON_AddItemToArray(root, cjson_op(history + i));
     }
+
+    char* enc = cJSON_PrintUnformatted(root);
+    cJSON_Delete(root);
+
+    return enc;
+}
+
+char* ot_encode_err(ot_err err) {
+    cJSON* root = cJSON_CreateObject();
+    cJSON_AddNumberToObject(root, "errorCode", err);
 
     char* enc = cJSON_PrintUnformatted(root);
     cJSON_Delete(root);
