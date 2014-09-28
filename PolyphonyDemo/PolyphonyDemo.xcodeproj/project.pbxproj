@@ -11,6 +11,8 @@
 		3B4B90DB198AE6C60071A190 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4B90DA198AE6C60071A190 /* CFNetwork.framework */; };
 		3B4B90DD198AE6D10071A190 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4B90DC198AE6D10071A190 /* Security.framework */; };
 		3B4B90DF198AE6E70071A190 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4B90DE198AE6E70071A190 /* libicucore.dylib */; };
+		3B55F26319CE9D2A00F97052 /* decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B55F25F19CE9D2A00F97052 /* decode.c */; };
+		3B55F26419CE9D2A00F97052 /* encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B55F26119CE9D2A00F97052 /* encode.c */; };
 		3B73A2A519838EEB00A34FEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2A419838EEB00A34FEC /* Foundation.framework */; };
 		3B73A2A719838EEB00A34FEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2A619838EEB00A34FEC /* CoreGraphics.framework */; };
 		3B73A2A919838EEB00A34FEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2A819838EEB00A34FEC /* UIKit.framework */; };
@@ -33,8 +35,6 @@
 		3B73A36E1983929400A34FEC /* doc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3591983929400A34FEC /* doc.c */; };
 		3B73A36F1983929400A34FEC /* hex.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A35B1983929400A34FEC /* hex.c */; };
 		3B73A3701983929400A34FEC /* ot.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A35D1983929400A34FEC /* ot.c */; };
-		3B73A3711983929400A34FEC /* otdecode.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A35F1983929400A34FEC /* otdecode.c */; };
-		3B73A3721983929400A34FEC /* otencode.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3611983929400A34FEC /* otencode.c */; };
 		3B73A3731983929400A34FEC /* server.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3631983929400A34FEC /* server.c */; };
 		3B73A3741983929400A34FEC /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3651983929400A34FEC /* sha1.c */; };
 		3B73A3751983929400A34FEC /* xform.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3671983929400A34FEC /* xform.c */; };
@@ -57,6 +57,10 @@
 		3B4B90DA198AE6C60071A190 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3B4B90DC198AE6D10071A190 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3B4B90DE198AE6E70071A190 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		3B55F25F19CE9D2A00F97052 /* decode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = decode.c; path = ../libot/decode.c; sourceTree = "<group>"; };
+		3B55F26019CE9D2A00F97052 /* decode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = decode.h; path = ../libot/decode.h; sourceTree = "<group>"; };
+		3B55F26119CE9D2A00F97052 /* encode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = encode.c; path = ../libot/encode.c; sourceTree = "<group>"; };
+		3B55F26219CE9D2A00F97052 /* encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = encode.h; path = ../libot/encode.h; sourceTree = "<group>"; };
 		3B73A2A119838EEB00A34FEC /* PolyphonyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolyphonyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B73A2A419838EEB00A34FEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3B73A2A619838EEB00A34FEC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,10 +95,6 @@
 		3B73A35C1983929400A34FEC /* hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hex.h; path = ../libot/hex.h; sourceTree = "<group>"; };
 		3B73A35D1983929400A34FEC /* ot.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ot.c; path = ../libot/ot.c; sourceTree = "<group>"; };
 		3B73A35E1983929400A34FEC /* ot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ot.h; path = ../libot/ot.h; sourceTree = "<group>"; };
-		3B73A35F1983929400A34FEC /* otdecode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = otdecode.c; path = ../libot/otdecode.c; sourceTree = "<group>"; };
-		3B73A3601983929400A34FEC /* otdecode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = otdecode.h; path = ../libot/otdecode.h; sourceTree = "<group>"; };
-		3B73A3611983929400A34FEC /* otencode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = otencode.c; path = ../libot/otencode.c; sourceTree = "<group>"; };
-		3B73A3621983929400A34FEC /* otencode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = otencode.h; path = ../libot/otencode.h; sourceTree = "<group>"; };
 		3B73A3631983929400A34FEC /* server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = server.c; path = ../libot/server.c; sourceTree = "<group>"; };
 		3B73A3641983929400A34FEC /* server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = server.h; path = ../libot/server.h; sourceTree = "<group>"; };
 		3B73A3651983929400A34FEC /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sha1.c; path = ../libot/sha1.c; sourceTree = "<group>"; };
@@ -235,27 +235,27 @@
 			children = (
 				3B73A34F1983929400A34FEC /* array.c */,
 				3B73A3501983929400A34FEC /* array.h */,
+				3B73A3511983929400A34FEC /* cjson */,
 				3B73A3551983929400A34FEC /* client.c */,
 				3B73A3561983929400A34FEC /* client.h */,
 				3B73A3571983929400A34FEC /* compose.c */,
 				3B73A3581983929400A34FEC /* compose.h */,
+				3B55F25F19CE9D2A00F97052 /* decode.c */,
+				3B55F26019CE9D2A00F97052 /* decode.h */,
 				3B73A3591983929400A34FEC /* doc.c */,
 				3B73A35A1983929400A34FEC /* doc.h */,
+				3B55F26119CE9D2A00F97052 /* encode.c */,
+				3B55F26219CE9D2A00F97052 /* encode.h */,
 				3B73A35B1983929400A34FEC /* hex.c */,
 				3B73A35C1983929400A34FEC /* hex.h */,
 				3B73A35D1983929400A34FEC /* ot.c */,
 				3B73A35E1983929400A34FEC /* ot.h */,
-				3B73A35F1983929400A34FEC /* otdecode.c */,
-				3B73A3601983929400A34FEC /* otdecode.h */,
-				3B73A3611983929400A34FEC /* otencode.c */,
-				3B73A3621983929400A34FEC /* otencode.h */,
 				3B73A3631983929400A34FEC /* server.c */,
 				3B73A3641983929400A34FEC /* server.h */,
 				3B73A3651983929400A34FEC /* sha1.c */,
 				3B73A3661983929400A34FEC /* sha1.h */,
 				3B73A3671983929400A34FEC /* xform.c */,
 				3B73A3681983929400A34FEC /* xform.h */,
-				3B73A3511983929400A34FEC /* cjson */,
 			);
 			name = libot;
 			sourceTree = "<group>";
@@ -362,18 +362,18 @@
 				3B73A3741983929400A34FEC /* sha1.c in Sources */,
 				3B73A36E1983929400A34FEC /* doc.c in Sources */,
 				3B73A36D1983929400A34FEC /* compose.c in Sources */,
-				3B73A3711983929400A34FEC /* otdecode.c in Sources */,
 				3B451590198AE4FF004D4126 /* SRWebSocket.m in Sources */,
 				3B73A3751983929400A34FEC /* xform.c in Sources */,
 				3B73A2B519838EEB00A34FEC /* PLYAppDelegate.m in Sources */,
 				3B73A36C1983929400A34FEC /* client.c in Sources */,
+				3B55F26419CE9D2A00F97052 /* encode.c in Sources */,
 				3B73A2B119838EEB00A34FEC /* main.m in Sources */,
 				3B73A3701983929400A34FEC /* ot.c in Sources */,
 				3B73A2BE19838EEB00A34FEC /* PLYViewController.m in Sources */,
 				3B73A3731983929400A34FEC /* server.c in Sources */,
 				3B73A36A1983929400A34FEC /* cJSON.c in Sources */,
 				3B73A3691983929400A34FEC /* array.c in Sources */,
-				3B73A3721983929400A34FEC /* otencode.c in Sources */,
+				3B55F26319CE9D2A00F97052 /* decode.c in Sources */,
 				3B73A36F1983929400A34FEC /* hex.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

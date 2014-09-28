@@ -79,13 +79,7 @@ static int client_send(const char* op) {
 
     staticTextView = self.textView;
     staticTextView.textStorage.delegate = self;
-    client = ot_new_client(client_send, client_event, 0);
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    client = ot_new_client(client_send, client_event);
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
@@ -108,45 +102,40 @@ static int client_send(const char* op) {
 }
 
 - (void)textStorage:(NSTextStorage *)textStorage willProcessEditing:(NSTextStorageEditActions)editedMask range:(NSRange)editedRange changeInLength:(NSInteger)delta {
-    if (delta > 0) {
-        char parent[20] = { 0 };
-        ot_op* op = ot_new_op(0, parent);
+    if (![textStorage.string hasSuffix:@"\n"]) {
+        NSAttributedString *newline = [[NSAttributedString alloc] initWithString:@"\n"];
+        [textStorage appendAttributedString:newline];
+    }
+}
 
-        uint32_t beforeLength = (uint32_t)editedRange.location;
-        if (beforeLength > 0) {
-            ot_skip(op, beforeLength);
-        }
+- (void)textStorage:(NSTextStorage *)textStorage didProcessEditing:(NSTextStorageEditActions)editedMask range:(NSRange)editedRange changeInLength:(NSInteger)delta {
+    if ((editedMask & NSTextStorageEditedCharacters) == 0) {
+        return;
+    }
 
+    ot_op* op = ot_new_op();
+
+    uint32_t beforeLength = (uint32_t)editedRange.location;
+    if (beforeLength > 0) {
+        ot_skip(op, beforeLength);
+    }
+
+    uint32_t deletedLength = (uint32_t) ((delta - editedRange.length) * -1);
+    if (deletedLength > 0) {
+        ot_delete(op, deletedLength);
+    }
+
+    if (editedRange.length > 0) {
         const char* inserted = [[textStorage.string substringWithRange:editedRange] UTF8String];
         ot_insert(op, inserted);
-
-        uint32_t afterLength = (uint32_t)(textStorage.string.length - (beforeLength + delta));
-        if (afterLength > 0) {
-            ot_skip(op, afterLength);
-        }
-
-        ot_client_apply(client, &op);
-    } else if (delta < 0) {
-        char parent[20] = { 0 };
-        ot_op* op = ot_new_op(0, parent);
-
-        uint32_t beforeLength = (uint32_t)editedRange.location;
-        if (beforeLength > 0) {
-            ot_skip(op, beforeLength);
-        }
-
-        uint32_t deletedLength = (uint32_t)(delta * -1);
-        ot_delete(op, deletedLength);
-
-        uint32_t afterLength = (uint32_t)(textStorage.string.length - beforeLength);
-        if (afterLength > 0) {
-            ot_skip(op, afterLength);
-        }
-
-        ot_client_apply(client, &op);
-    } else {
-
     }
+
+    uint32_t afterLength = (uint32_t)(textStorage.string.length - beforeLength - editedRange.length);
+    if (afterLength > 0) {
+        ot_skip(op, afterLength);
+    }
+
+    ot_client_apply(client, &op);
 }
 
 @end
