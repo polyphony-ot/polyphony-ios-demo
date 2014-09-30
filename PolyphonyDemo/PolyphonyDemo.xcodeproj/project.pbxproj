@@ -26,8 +26,6 @@
 		3B73A2C719838EEC00A34FEC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2C619838EEC00A34FEC /* XCTest.framework */; };
 		3B73A2C819838EEC00A34FEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2A419838EEB00A34FEC /* Foundation.framework */; };
 		3B73A2C919838EEC00A34FEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2A819838EEB00A34FEC /* UIKit.framework */; };
-		3B73A2D119838EEC00A34FEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B73A2CF19838EEC00A34FEC /* InfoPlist.strings */; };
-		3B73A2D319838EEC00A34FEC /* PolyphonyDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A2D219838EEC00A34FEC /* PolyphonyDemoTests.m */; };
 		3B73A3691983929400A34FEC /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A34F1983929400A34FEC /* array.c */; };
 		3B73A36A1983929400A34FEC /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3521983929400A34FEC /* cJSON.c */; };
 		3B73A36C1983929400A34FEC /* client.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3551983929400A34FEC /* client.c */; };
@@ -78,9 +76,6 @@
 		3B73A2BF19838EEB00A34FEC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3B73A2C519838EEC00A34FEC /* PolyphonyDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolyphonyDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B73A2C619838EEC00A34FEC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		3B73A2CE19838EEC00A34FEC /* PolyphonyDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PolyphonyDemoTests-Info.plist"; sourceTree = "<group>"; };
-		3B73A2D019838EEC00A34FEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3B73A2D219838EEC00A34FEC /* PolyphonyDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PolyphonyDemoTests.m; sourceTree = "<group>"; };
 		3B73A34F1983929400A34FEC /* array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = array.c; path = ../libot/array.c; sourceTree = "<group>"; };
 		3B73A3501983929400A34FEC /* array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = array.h; path = ../libot/array.h; sourceTree = "<group>"; };
 		3B73A3521983929400A34FEC /* cJSON.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cJSON.c; sourceTree = "<group>"; };
@@ -147,7 +142,6 @@
 				3B45158C198AE4FF004D4126 /* SocketRocket */,
 				3B73A376198392A300A34FEC /* libot */,
 				3B73A2AA19838EEB00A34FEC /* PolyphonyDemo */,
-				3B73A2CC19838EEC00A34FEC /* PolyphonyDemoTests */,
 				3B73A2A319838EEB00A34FEC /* Frameworks */,
 				3B73A2A219838EEB00A34FEC /* Products */,
 			);
@@ -198,24 +192,6 @@
 				3B73A2AD19838EEB00A34FEC /* InfoPlist.strings */,
 				3B73A2B019838EEB00A34FEC /* main.m */,
 				3B73A2B219838EEB00A34FEC /* PolyphonyDemo-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3B73A2CC19838EEC00A34FEC /* PolyphonyDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				3B73A2D219838EEC00A34FEC /* PolyphonyDemoTests.m */,
-				3B73A2CD19838EEC00A34FEC /* Supporting Files */,
-			);
-			path = PolyphonyDemoTests;
-			sourceTree = "<group>";
-		};
-		3B73A2CD19838EEC00A34FEC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3B73A2CE19838EEC00A34FEC /* PolyphonyDemoTests-Info.plist */,
-				3B73A2CF19838EEC00A34FEC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -348,7 +324,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B73A2D119838EEC00A34FEC /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +357,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B73A2D319838EEC00A34FEC /* PolyphonyDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,14 +393,6 @@
 				3B73A2BA19838EEB00A34FEC /* Base */,
 			);
 			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		3B73A2CF19838EEC00A34FEC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B73A2D019838EEC00A34FEC /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
