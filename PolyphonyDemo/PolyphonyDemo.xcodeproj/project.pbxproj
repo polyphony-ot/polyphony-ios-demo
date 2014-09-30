@@ -20,7 +20,6 @@
 		3B73A2B119838EEB00A34FEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A2B019838EEB00A34FEC /* main.m */; };
 		3B73A2B519838EEB00A34FEC /* PLYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A2B419838EEB00A34FEC /* PLYAppDelegate.m */; };
 		3B73A2B819838EEB00A34FEC /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B73A2B619838EEB00A34FEC /* Main_iPhone.storyboard */; };
-		3B73A2BB19838EEB00A34FEC /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B73A2B919838EEB00A34FEC /* Main_iPad.storyboard */; };
 		3B73A2BE19838EEB00A34FEC /* PLYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A2BD19838EEB00A34FEC /* PLYViewController.m */; };
 		3B73A2C019838EEB00A34FEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B73A2BF19838EEB00A34FEC /* Images.xcassets */; };
 		3B73A2C719838EEC00A34FEC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2C619838EEC00A34FEC /* XCTest.framework */; };
@@ -70,7 +69,6 @@
 		3B73A2B319838EEB00A34FEC /* PLYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLYAppDelegate.h; sourceTree = "<group>"; };
 		3B73A2B419838EEB00A34FEC /* PLYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLYAppDelegate.m; sourceTree = "<group>"; };
 		3B73A2B719838EEB00A34FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		3B73A2BA19838EEB00A34FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		3B73A2BC19838EEB00A34FEC /* PLYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLYViewController.h; sourceTree = "<group>"; };
 		3B73A2BD19838EEB00A34FEC /* PLYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLYViewController.m; sourceTree = "<group>"; };
 		3B73A2BF19838EEB00A34FEC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 				3B73A2B319838EEB00A34FEC /* PLYAppDelegate.h */,
 				3B73A2B419838EEB00A34FEC /* PLYAppDelegate.m */,
 				3B73A2B619838EEB00A34FEC /* Main_iPhone.storyboard */,
-				3B73A2B919838EEB00A34FEC /* Main_iPad.storyboard */,
 				3B73A2BC19838EEB00A34FEC /* PLYViewController.h */,
 				3B73A2BD19838EEB00A34FEC /* PLYViewController.m */,
 				3B73A2BF19838EEB00A34FEC /* Images.xcassets */,
@@ -313,7 +310,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B73A2BB19838EEB00A34FEC /* Main_iPad.storyboard in Resources */,
 				3B73A2C019838EEB00A34FEC /* Images.xcassets in Resources */,
 				3B73A2B819838EEB00A34FEC /* Main_iPhone.storyboard in Resources */,
 				3B73A2AF19838EEB00A34FEC /* InfoPlist.strings in Resources */,
@@ -385,14 +381,6 @@
 				3B73A2B719838EEB00A34FEC /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		3B73A2B919838EEB00A34FEC /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B73A2BA19838EEB00A34FEC /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -481,6 +469,7 @@
 				GCC_PREFIX_HEADER = "PolyphonyDemo/PolyphonyDemo-Prefix.pch";
 				INFOPLIST_FILE = "PolyphonyDemo/PolyphonyDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -494,6 +483,7 @@
 				GCC_PREFIX_HEADER = "PolyphonyDemo/PolyphonyDemo-Prefix.pch";
 				INFOPLIST_FILE = "PolyphonyDemo/PolyphonyDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
