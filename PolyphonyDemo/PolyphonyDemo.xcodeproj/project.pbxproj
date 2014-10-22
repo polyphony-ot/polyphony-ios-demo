@@ -22,9 +22,6 @@
 		3B73A2B819838EEB00A34FEC /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B73A2B619838EEB00A34FEC /* Main_iPhone.storyboard */; };
 		3B73A2BE19838EEB00A34FEC /* PLYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A2BD19838EEB00A34FEC /* PLYViewController.m */; };
 		3B73A2C019838EEB00A34FEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B73A2BF19838EEB00A34FEC /* Images.xcassets */; };
-		3B73A2C719838EEC00A34FEC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2C619838EEC00A34FEC /* XCTest.framework */; };
-		3B73A2C819838EEC00A34FEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2A419838EEB00A34FEC /* Foundation.framework */; };
-		3B73A2C919838EEC00A34FEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2A819838EEB00A34FEC /* UIKit.framework */; };
 		3B73A3691983929400A34FEC /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A34F1983929400A34FEC /* array.c */; };
 		3B73A36A1983929400A34FEC /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3521983929400A34FEC /* cJSON.c */; };
 		3B73A36C1983929400A34FEC /* client.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3551983929400A34FEC /* client.c */; };
@@ -36,16 +33,6 @@
 		3B73A3741983929400A34FEC /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3651983929400A34FEC /* sha1.c */; };
 		3B73A3751983929400A34FEC /* xform.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B73A3671983929400A34FEC /* xform.c */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		3B73A2CA19838EEC00A34FEC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B73A29919838EEB00A34FEC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B73A2A019838EEB00A34FEC;
-			remoteInfo = PolyphonyDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3B45158D198AE4FF004D4126 /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
@@ -72,7 +59,6 @@
 		3B73A2BC19838EEB00A34FEC /* PLYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLYViewController.h; sourceTree = "<group>"; };
 		3B73A2BD19838EEB00A34FEC /* PLYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLYViewController.m; sourceTree = "<group>"; };
 		3B73A2BF19838EEB00A34FEC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3B73A2C519838EEC00A34FEC /* PolyphonyDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolyphonyDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B73A2C619838EEC00A34FEC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3B73A34F1983929400A34FEC /* array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = array.c; path = ../libot/array.c; sourceTree = "<group>"; };
 		3B73A3501983929400A34FEC /* array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = array.h; path = ../libot/array.h; sourceTree = "<group>"; };
@@ -110,16 +96,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B73A2C219838EEC00A34FEC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3B73A2C719838EEC00A34FEC /* XCTest.framework in Frameworks */,
-				3B73A2C919838EEC00A34FEC /* UIKit.framework in Frameworks */,
-				3B73A2C819838EEC00A34FEC /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -149,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				3B73A2A119838EEB00A34FEC /* PolyphonyDemo.app */,
-				3B73A2C519838EEC00A34FEC /* PolyphonyDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -253,24 +228,6 @@
 			productReference = 3B73A2A119838EEB00A34FEC /* PolyphonyDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3B73A2C419838EEC00A34FEC /* PolyphonyDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3B73A2D919838EEC00A34FEC /* Build configuration list for PBXNativeTarget "PolyphonyDemoTests" */;
-			buildPhases = (
-				3B73A2C119838EEC00A34FEC /* Sources */,
-				3B73A2C219838EEC00A34FEC /* Frameworks */,
-				3B73A2C319838EEC00A34FEC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3B73A2CB19838EEC00A34FEC /* PBXTargetDependency */,
-			);
-			name = PolyphonyDemoTests;
-			productName = PolyphonyDemoTests;
-			productReference = 3B73A2C519838EEC00A34FEC /* PolyphonyDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -280,11 +237,6 @@
 				CLASSPREFIX = PLY;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Polyphony;
-				TargetAttributes = {
-					3B73A2C419838EEC00A34FEC = {
-						TestTargetID = 3B73A2A019838EEB00A34FEC;
-					};
-				};
 			};
 			buildConfigurationList = 3B73A29C19838EEB00A34FEC /* Build configuration list for PBXProject "PolyphonyDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -300,7 +252,6 @@
 			projectRoot = "";
 			targets = (
 				3B73A2A019838EEB00A34FEC /* PolyphonyDemo */,
-				3B73A2C419838EEC00A34FEC /* PolyphonyDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -313,13 +264,6 @@
 				3B73A2C019838EEB00A34FEC /* Images.xcassets in Resources */,
 				3B73A2B819838EEB00A34FEC /* Main_iPhone.storyboard in Resources */,
 				3B73A2AF19838EEB00A34FEC /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B73A2C319838EEC00A34FEC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,22 +293,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B73A2C119838EEC00A34FEC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3B73A2CB19838EEC00A34FEC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3B73A2A019838EEB00A34FEC /* PolyphonyDemo */;
-			targetProxy = 3B73A2CA19838EEC00A34FEC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3B73A2AD19838EEB00A34FEC /* InfoPlist.strings */ = {
@@ -488,46 +417,6 @@
 			};
 			name = Release;
 		};
-		3B73A2DA19838EEC00A34FEC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PolyphonyDemo.app/PolyphonyDemo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PolyphonyDemo/PolyphonyDemo-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "PolyphonyDemoTests/PolyphonyDemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		3B73A2DB19838EEC00A34FEC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PolyphonyDemo.app/PolyphonyDemo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PolyphonyDemo/PolyphonyDemo-Prefix.pch";
-				INFOPLIST_FILE = "PolyphonyDemoTests/PolyphonyDemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -545,15 +434,6 @@
 			buildConfigurations = (
 				3B73A2D719838EEC00A34FEC /* Debug */,
 				3B73A2D819838EEC00A34FEC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3B73A2D919838EEC00A34FEC /* Build configuration list for PBXNativeTarget "PolyphonyDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3B73A2DA19838EEC00A34FEC /* Debug */,
-				3B73A2DB19838EEC00A34FEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
