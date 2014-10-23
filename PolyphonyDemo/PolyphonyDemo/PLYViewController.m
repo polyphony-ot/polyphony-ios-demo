@@ -2,7 +2,7 @@
 #import "SRWebSocket.h"
 #import "client.h"
 
-@interface PLYViewController () <SRWebSocketDelegate, NSTextStorageDelegate>
+@interface PLYViewController () <SRWebSocketDelegate, NSTextStorageDelegate, UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
@@ -99,6 +99,7 @@ static int client_send(const char* op) {
 
     // Assign the text storage a delegate so we get notifed when the user changes the text.
     staticTextView = self.textView;
+    staticTextView.delegate = self;
     staticTextView.textStorage.delegate = self;
 
     // Create our libot client and give it our send and event functions.
@@ -183,6 +184,11 @@ static int client_send(const char* op) {
 
     // Finally, apply our operation.
     ot_client_apply(client, &op);
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    NSUInteger newLength = [textView.text length] + [text length] - range.length;
+    return (newLength < 1024);
 }
 
 @end
