@@ -92,7 +92,7 @@ static int client_send(const char* op) {
     [super viewDidLoad];
 
     // Create our WebSocket and connect it to the Polyphony demo server.
-    NSURL *url = [[NSURL alloc] initWithString:@"ws://staging.polyphony-ot.com:51015"];
+    NSURL *url = [[NSURL alloc] initWithString:@"ws://polyphony-ot.com:51015"];
     websocket = [[SRWebSocket alloc] initWithURL:url];
     websocket.delegate = self;
     [websocket open];
