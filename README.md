@@ -15,5 +15,5 @@ Walkthrough
 -----------
 
 All of the code for the demo can be found in
-<PolyphonyDemo/PolyphonyDemo/PLYViewController.m>. It demonstrates how to create
+[PolyphonyDemo/PolyphonyDemo/PLYViewController.m](PolyphonyDemo/PolyphonyDemo/PLYViewController.m). It demonstrates how to create
 a real-time text editor using a UITextView and a Polyphony client.
