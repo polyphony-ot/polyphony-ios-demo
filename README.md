@@ -2,7 +2,8 @@ Polyphony iOS Demo
 ==================
 
 A Polyphony demo running on iOS that performs real-time text editing with
-<http://polyphony-ot.com>.
+<http://polyphony-ot.com>. It shows how to build a completely native real-time
+editor without using any WebViews.
 
 Running
 -------
@@ -16,6 +17,6 @@ installed, simply open PolyphonyDemo.xcworkspace and run the app with Cmd+R.
 Walkthrough
 -----------
 
-All of the code for the demo can be found in
-[PolyphonyDemo/PolyphonyDemo/PLYViewController.m](PolyphonyDemo/PolyphonyDemo/PLYViewController.m). It demonstrates how to create
-a real-time text editor using a UITextView and a Polyphony client.
+All of the code for the demo can be found in [PolyphonyDemo/PolyphonyDemo/PLYViewController.m](PolyphonyDemo/PolyphonyDemo/PLYViewController.m).
+It demonstrates how to create a real-time text editor using a UITextView and a
+Polyphony client.
