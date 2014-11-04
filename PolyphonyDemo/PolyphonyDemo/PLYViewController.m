@@ -186,6 +186,9 @@ static int client_send(const char* op) {
     ot_client_apply(client, &op);
 }
 
+// This callback is invoked when the UITextView is about to be updated with any user changes. We use this opportunity to
+// limit the length of the document. For the purposes of the demo, the server will reject any changes that cause the
+// document to exceed a length of 1024 characters.
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
     NSUInteger newLength = [textView.text length] + [text length] - range.length;
     return (newLength < 1024);
