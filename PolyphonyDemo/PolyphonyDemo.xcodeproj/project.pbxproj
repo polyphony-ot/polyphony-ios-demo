@@ -13,6 +13,7 @@
 		3B4B90DF198AE6E70071A190 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4B90DE198AE6E70071A190 /* libicucore.dylib */; };
 		3B55F26319CE9D2A00F97052 /* decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B55F25F19CE9D2A00F97052 /* decode.c */; };
 		3B55F26419CE9D2A00F97052 /* encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B55F26119CE9D2A00F97052 /* encode.c */; };
+		3B739E2B1A1494160058B6F7 /* utf8.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B739E291A1494160058B6F7 /* utf8.c */; };
 		3B73A2A519838EEB00A34FEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2A419838EEB00A34FEC /* Foundation.framework */; };
 		3B73A2A719838EEB00A34FEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2A619838EEB00A34FEC /* CoreGraphics.framework */; };
 		3B73A2A919838EEB00A34FEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B73A2A819838EEB00A34FEC /* UIKit.framework */; };
@@ -45,6 +46,8 @@
 		3B55F26019CE9D2A00F97052 /* decode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = decode.h; path = ../libot/decode.h; sourceTree = "<group>"; };
 		3B55F26119CE9D2A00F97052 /* encode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = encode.c; path = ../libot/encode.c; sourceTree = "<group>"; };
 		3B55F26219CE9D2A00F97052 /* encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = encode.h; path = ../libot/encode.h; sourceTree = "<group>"; };
+		3B739E291A1494160058B6F7 /* utf8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = utf8.c; path = ../libot/utf8.c; sourceTree = "<group>"; };
+		3B739E2A1A1494160058B6F7 /* utf8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = utf8.h; path = ../libot/utf8.h; sourceTree = "<group>"; };
 		3B73A2A119838EEB00A34FEC /* PolyphonyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolyphonyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B73A2A419838EEB00A34FEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3B73A2A619838EEB00A34FEC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -202,6 +205,8 @@
 				3B73A3641983929400A34FEC /* server.h */,
 				3B73A3651983929400A34FEC /* sha1.c */,
 				3B73A3661983929400A34FEC /* sha1.h */,
+				3B739E291A1494160058B6F7 /* utf8.c */,
+				3B739E2A1A1494160058B6F7 /* utf8.h */,
 				3B73A3671983929400A34FEC /* xform.c */,
 				3B73A3681983929400A34FEC /* xform.h */,
 			);
@@ -274,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B739E2B1A1494160058B6F7 /* utf8.c in Sources */,
 				3B73A3741983929400A34FEC /* sha1.c in Sources */,
 				3B73A36E1983929400A34FEC /* doc.c in Sources */,
 				3B73A36D1983929400A34FEC /* compose.c in Sources */,
